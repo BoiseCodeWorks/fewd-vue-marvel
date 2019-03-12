@@ -8,5 +8,8 @@ Vue.config.productionTip = false
 new Vue({
   router,
   store,
+  mounted(){//put any logic here that you want to have run at your application start
+    store.dispatch('getCharacters')
+  },
   render: function (h) { return h(App) }
 }).$mount('#app')
